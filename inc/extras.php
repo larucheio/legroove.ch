@@ -31,7 +31,6 @@ if ( ! function_exists( 'understrap_body_classes' ) ) {
 		}
 
 		// Adds a body class based on the presence of a sidebar.
-		$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 		if ( is_page_template( 'page-templates/fullwidthpage.php' ) ) {
 			$classes[] = 'understrap-no-sidebar';
 		} elseif (
@@ -43,8 +42,6 @@ if ( ! function_exists( 'understrap_body_classes' ) ) {
 				)
 			)
 		) {
-			$classes[] = 'understrap-has-sidebar';
-		} elseif ( 'none' !== $sidebar_pos ) {
 			$classes[] = 'understrap-has-sidebar';
 		} else {
 			$classes[] = 'understrap-no-sidebar';
