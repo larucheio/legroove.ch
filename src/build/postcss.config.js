@@ -2,13 +2,11 @@
 
 module.exports = ctx => {
   return {
-    map: ctx.file.dirname.includes('examples') ?
-      false :
-      {
+    map: {
         inline: false,
         annotation: true,
         sourcesContent: true
-      },
+    },
     plugins: {
       autoprefixer: {
         cascade: false

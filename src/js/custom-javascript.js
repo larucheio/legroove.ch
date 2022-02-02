@@ -1,1 +1,1 @@
-// Add your custom JS here.
+// Add your JS customizations here

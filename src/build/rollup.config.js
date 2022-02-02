@@ -8,7 +8,7 @@ import multi from '@rollup/plugin-multi-entry'
 const replace = require('@rollup/plugin-replace')
 const banner = require('./banner.js')
 
-let fileDest = 'child-theme.js'
+let fileDest = 'theme.js'
 const external = ['jquery']
 const plugins = [
   babel({
