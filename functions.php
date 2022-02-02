@@ -29,11 +29,6 @@ $understrap_includes = array(
 	'/deprecated.php',                      // Load deprecated functions.
 );
 
-// Load WooCommerce functions if WooCommerce is activated.
-if ( class_exists( 'WooCommerce' ) ) {
-	$understrap_includes[] = '/woocommerce.php';
-}
-
 // Load Jetpack compatibility file if Jetpack is activiated.
 if ( class_exists( 'Jetpack' ) ) {
 	$understrap_includes[] = '/jetpack.php';
