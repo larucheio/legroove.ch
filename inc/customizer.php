@@ -244,3 +244,32 @@ if ( ! function_exists( 'understrap_default_navbar_type' ) ) {
 	}
 }
 add_filter( 'theme_mod_understrap_navbar_type', 'understrap_default_navbar_type', 20 );
+
+function customize_customizer($wp_customize)
+{
+    $wp_customize->remove_setting('background_color');
+    $wp_customize->remove_control('background_color');
+
+    $wp_customize->add_setting('primary_color', array(
+        'default' => '#04bfbf',
+    ));
+
+    $wp_customize->add_setting('secondary_color', array(
+        'default' => '#45ace0',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'primary_color', array(
+        'label' => 'Primary Color',
+        'section' => 'colors',
+        'settings' => 'primary_color'
+    )));
+
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'secondary_color', array(
+        'label' => 'Secondary Color',
+        'section' => 'colors',
+        'settings' => 'secondary_color'
+    )));
+
+    $wp_customize->get_setting('primary_color')->transport = 'postMessage';
+}
+add_action('customize_register', 'customize_customizer');
