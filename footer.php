@@ -11,8 +11,6 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
-
 <div class="wrapper" id="wrapper-footer">
 
 	<div class="container">
