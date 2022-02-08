@@ -16913,4 +16913,12 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   mix-blend-mode: soft-light;
 }
 
+#logosvg {
+  height: 75px;
+  width: 75px;
+}
+#logosvg path {
+  fill: var(--bs-primary);
+}
+
 /*# sourceMappingURL=theme.css.map */

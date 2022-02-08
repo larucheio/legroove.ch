@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-primary" aria-labelledby="main-nav-label">
+<nav id="main-nav" class="navbar navbar-expand-md" aria-labelledby="main-nav-label">
 
 	<h2 id="main-nav-label" class="screen-reader-text">
 		<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
@@ -21,15 +21,11 @@ defined( 'ABSPATH' ) || exit;
 		<!-- Your site title as branding in the menu -->
 		<?php if ( ! has_custom_logo() ) { ?>
 
-			<?php if ( is_front_page() && is_home() ) : ?>
-
-				<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-
-			<?php else : ?>
-
-				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-
-			<?php endif; ?>
+			<h1 class="navbar-brand mb-0">
+				<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url">
+					<?php echo file_get_contents(get_template_directory_uri() . "/images/legroove-logo.svg"); ?>
+				</a>
+			</h1>
 
 			<?php
 		} else {
