@@ -58,8 +58,6 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 			'html5',
 			array(
 				'search-form',
-				'comment-form',
-				'comment-list',
 				'gallery',
 				'caption',
 				'script',

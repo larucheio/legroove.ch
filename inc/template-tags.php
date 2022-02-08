@@ -68,11 +68,6 @@ if ( ! function_exists( 'understrap_entry_footer' ) ) {
 				printf( '<span class="tags-links">' . esc_html__( 'Tagged %s', 'understrap' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			comments_popup_link( esc_html__( 'Leave a comment', 'understrap' ), esc_html__( '1 Comment', 'understrap' ), esc_html__( '% Comments', 'understrap' ) );
-			echo '</span>';
-		}
 		understrap_edit_post_link();
 	}
 }
@@ -147,39 +142,6 @@ if ( ! function_exists( 'understrap_body_attributes' ) ) {
 			}
 		}
 		echo trim( $attributes ); // phpcs:ignore WordPress.Security.EscapeOutput
-	}
-}
-
-if ( ! function_exists( 'understrap_comment_navigation' ) ) {
-	/**
-	 * Displays the comment navigation.
-	 *
-	 * @param string $nav_id The ID of the comment navigation.
-	 */
-	function understrap_comment_navigation( $nav_id ) {
-		if ( get_comment_pages_count() <= 1 ) {
-			// Return early if there are no comments to navigate through.
-			return;
-		}
-		?>
-		<nav class="comment-navigation" id="<?php echo esc_attr( $nav_id ); ?>">
-
-			<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'understrap' ); ?></h1>
-
-			<?php if ( get_previous_comments_link() ) { ?>
-				<div class="nav-previous">
-					<?php previous_comments_link( __( '&larr; Older Comments', 'understrap' ) ); ?>
-				</div>
-			<?php } ?>
-
-			<?php if ( get_next_comments_link() ) { ?>
-				<div class="nav-next">
-					<?php next_comments_link( __( 'Newer Comments &rarr;', 'understrap' ) ); ?>
-				</div>
-			<?php } ?>
-
-		</nav><!-- #<?php echo esc_attr( $nav_id ); ?> -->
-		<?php
 	}
 }
 
