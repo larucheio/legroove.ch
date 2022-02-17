@@ -5198,7 +5198,7 @@ textarea.form-control-lg {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: var(--bs-primary);
+  color: var(--bs-primary) !important;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -5208,7 +5208,7 @@ textarea.form-control-lg {
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: shift-color(var(--bs-primary), 20%);
+  color: var(--bs-secondary) !important;
 }
 .nav-link.disabled {
   color: #6c757d;
@@ -13154,6 +13154,10 @@ a.skip-link {
 
 .navbar h1, .navbar .h1 {
   font-weight: 400;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: var(--bs-secondary) !important;
 }
 
 .gallery {

@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<nav id="main-nav" class="navbar navbar-expand-md" aria-labelledby="main-nav-label">
+<nav id="main-nav" class="navbar navbar-light navbar-expand-md" aria-labelledby="main-nav-label">
 
 	<h2 id="main-nav-label" class="screen-reader-text">
 		<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>

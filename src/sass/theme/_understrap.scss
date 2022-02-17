@@ -151,6 +151,10 @@ a.skip-link {
 	font-weight: $font-weight-normal;
 }
 
+.navbar-light .navbar-nav .nav-link.active {
+	color: var(--bs-secondary) !important;
+}
+
 // Galleries
 .gallery {
 	margin-bottom: 1.5em;
