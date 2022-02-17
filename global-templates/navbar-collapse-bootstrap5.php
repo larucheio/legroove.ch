@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 	</h2>
 
 
-	<div class="container">
+	<div class="container align-items-start">
 
 		<!-- Your site title as branding in the menu -->
 		<?php if ( ! has_custom_logo() ) { ?>
@@ -45,7 +45,7 @@ defined( 'ABSPATH' ) || exit;
 				'theme_location'  => 'primary',
 				'container_class' => 'collapse navbar-collapse',
 				'container_id'    => 'navbarNavDropdown',
-				'menu_class'      => 'navbar-nav ms-auto',
+				'menu_class'      => 'navbar-nav ms-auto text-uppercase h4',
 				'fallback_cb'     => '',
 				'menu_id'         => 'main-menu',
 				'depth'           => 2,
