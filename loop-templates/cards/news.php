@@ -10,12 +10,20 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <div class="card h-100 border-secondary groove-bg-gradient">
-    <div class="card-body">
+    <?php if (has_post_thumbnail()): ?>
+        <div class="m-3">
+            <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+        </div>
+    <?php endif; ?>
+
+    <div class="card-body text-white">
         <h2 class="h3"><?php the_title(); ?></h2>
 
+        <?php if (!has_post_thumbnail()): ?>
         <p>
             <?php echo get_the_excerpt(); ?>
         </p>
+        <?php endif; ?>
     </div>
     <div class="card-footer bg-transparent border-0 text-white d-flex justify-content-between">
         <span class="small"><?php echo get_the_date('d.m.Y') ?> · NEWS</span>

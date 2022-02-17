@@ -13,31 +13,38 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
 		<div class="entry-meta">
 
-			<?php understrap_posted_on(); ?>
+			<span class="text-primary">
+				<?php
+					foreach((get_the_category()) as $category) {
+						echo $category->cat_name . ' ';
+					}
+					echo " • ";
+					understrap_posted_on();
+				?>
+			</span>
 
 		</div><!-- .entry-meta -->
 
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<div class="row">
+		<div class="col-lg-4 offset-lg-1">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</div>
+		<div class="col-lg-6">
+			<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-	<div class="entry-content">
+			<div class="entry-content mt-5">
 
-		<?php
-		the_content();
-		understrap_link_pages();
-		?>
+				<?php
+				the_content();
+				understrap_link_pages();
+				?>
 
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-
-		<?php understrap_entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
+			</div><!-- .entry-content -->
+		</div>
+	</div>
 
 </article><!-- #post-## -->
