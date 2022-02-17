@@ -1,2 +1,9 @@
+@import "font-faces";
+
 @import "grain_background";
 @import "header";
+@import "overrides";
+
+.groove-bg-gradient {
+  background: linear-gradient(0deg, var(--bs-secondary), var(--bs-primary));
+}
