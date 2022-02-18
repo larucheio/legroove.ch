@@ -16653,12 +16653,22 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   fill: var(--bs-primary);
 }
 
+.border-primary {
+  border-color: var(--bs-primary) !important;
+}
+
 .border-secondary {
   border-color: var(--bs-secondary) !important;
 }
 
 .groove-bg-gradient {
   background: linear-gradient(0deg, var(--bs-secondary), var(--bs-primary));
+}
+
+.groove-text-gradient {
+  background: linear-gradient(270deg, var(--bs-secondary), var(--bs-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*# sourceMappingURL=theme.css.map */

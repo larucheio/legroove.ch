@@ -1,0 +1,9 @@
+.groove-bg-gradient {
+  background: linear-gradient(0deg, var(--bs-secondary), var(--bs-primary));
+}
+
+.groove-text-gradient {
+  background: linear-gradient(270deg, var(--bs-secondary), var(--bs-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

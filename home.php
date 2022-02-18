@@ -37,10 +37,14 @@ get_header();
 					?>
 				</div>
 
-			</main><!-- #main -->
+				<section class="mt-5 pt-5 text-center">
+					<h2 class="display-1">
+						<span class="groove-text-gradient">Appel a benevoles!!!</span>
+					</h2>
+					<a href="#" class="btn btn-primary btn-lg bg-primary border-primary">Contactez-nous</a>
+				</section>
 
-			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
+			</main><!-- #main -->
 
 		</div><!-- .row -->
 
