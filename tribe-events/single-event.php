@@ -81,7 +81,7 @@ $title = apply_filters( 'tribe_events_single_event_title_html', the_title( $befo
 
     <div class="row">
         <div class="col-md-6 offset-md-6">
-            <h2 class="mb-0 text-secondary"><?php echo tribe_get_start_date(null, false, 'd M y'); ?></h2>
+            <h2 class="mb-0 text-secondary"><?php echo normalize_headers(tribe_get_start_date(null, false, 'd M y')); ?></h2>
             <h1 class="display-2"><?php echo the_title(); ?></h1>
         </div>
     </div>
@@ -105,9 +105,6 @@ $title = apply_filters( 'tribe_events_single_event_title_html', the_title( $befo
         	</div>
 
             <?php tribe_get_template_part( 'modules/meta/details' ); ?>
-
-            <!-- .tribe-events-single-event-description -->
-            <?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
         </div>
     </div>
 
