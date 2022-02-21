@@ -23,7 +23,11 @@ get_header();
 
 		<div class="row">
 
-			<main class="site-main" id="main">
+			<?php
+				echo do_shortcode('[smartslider3 slider="1"]');
+			?>
+
+			<main class="site-main mt-5" id="main">
 
 				<div class="row row-cols-1 row-cols-md-3 g-4">
 					<?php
