@@ -19,7 +19,7 @@ get_header();
 
 		<div class="row">
 
-			<main class="site-main" id="main">
+			<main class="site-main mb-5" id="main">
 
 				<?php
 				if ( have_posts() ) {

@@ -16685,4 +16685,10 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   fill: var(--bs-primary);
 }
 
+@media (min-width: 1200px) {
+  .display-1 {
+    font-size: 14rem;
+  }
+}
+
 /*# sourceMappingURL=theme.css.map */
