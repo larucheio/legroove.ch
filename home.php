@@ -15,6 +15,18 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header();
+
+/* Get all sticky posts */
+$sticky = get_option( 'sticky_posts' );
+$events = array_column(tribe_get_events(['featured' => true]), 'ID');
+$sticky = array_merge($sticky, $events);
+
+$the_query = new WP_Query( array(
+      'post_type' => array('tribe_events', 'post'),
+	  'post__in' => $sticky,
+	  'orderby' => 'date',
+	  'order' => 'DESC',
+));
 ?>
 
 <div class="wrapper" id="index-wrapper">
@@ -31,10 +43,10 @@ get_header();
 
 				<div class="row row-cols-1 row-cols-md-3 g-4">
 					<?php
-					if ( have_posts() ) {
+					if ( $the_query->have_posts() ) {
 						// Start the Loop.
-						while ( have_posts() ) {
-							the_post();
+						while ( $the_query->have_posts() ) {
+							$the_query->the_post();
 							get_template_part( 'loop-templates/content', 'home' );
 						}
 					}
