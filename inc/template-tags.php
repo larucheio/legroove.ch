@@ -157,24 +157,19 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 			return;
 		}
 
-		$featured_posts = new WP_Query(array(
-		  'post__not_in'=> array(get_the_ID()),
-		  'category__in' => $category_id,
-		  'posts_per_page' => 3
-		 ));
+		global $post;
+		$featured_posts = tribe_get_events( [
+			'posts_per_page' => 4,
+			'start_date'     => 'now',
+		] );
 
-		if ($category_id === 4) {
-			echo '<h1 class="text-secondary">A la une</h1>';
-		} elseif ($category_id === 5) {
-			echo '<h1 class="text-secondary">Dernieres news</h1>';
-		}
-
-		 ?>
-		 <div class="row row-cols-1 row-cols-md-3 g-4">
+		echo '<h1 class="mt-5 text-secondary">Prochainement au Groove</h1>';
+		?>
+		<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
 			 <?php
 			 // Start the loop.
-			 while ( $featured_posts->have_posts() ) {
-				 $featured_posts->the_post();
+			 foreach ( $featured_posts as $post ) {
+				 setup_postdata( $post );
 				 get_template_part( 'loop-templates/content', 'home' );
 			 }
 			 ?>
