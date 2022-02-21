@@ -15,6 +15,8 @@ defined( 'ABSPATH' ) || exit;
 			echo get_template_part('loop-templates/cards/media');
 		} elseif (in_category('5')) {
 			echo get_template_part('loop-templates/cards/news');
+		} elseif (tribe_is_event(get_the_ID())) {
+			echo get_template_part('loop-templates/cards/agenda');
 		}
 	?>
 </article><!-- #post-## -->
