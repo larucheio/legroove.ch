@@ -41,7 +41,7 @@ get_header();
 					?>
 				</div>
 
-				<section class="mt-5 pt-5 text-center">
+				<section class="my-5 py-5 text-center">
 					<h2 class="display-1">
 						<span class="groove-text-gradient">Appel a benevoles!!!</span>
 					</h2>
