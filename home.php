@@ -42,7 +42,7 @@ get_header();
 				</div>
 
 				<section class="my-5 py-5 text-center">
-					<h2 class="display-1">
+					<h2 class="display-2">
 						<span class="groove-text-gradient">Appel a benevoles!!!</span>
 					</h2>
 					<a href="#" class="btn btn-primary btn-lg bg-primary border-primary">Contactez-nous</a>
