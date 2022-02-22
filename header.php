@@ -39,6 +39,8 @@ defined( 'ABSPATH' ) || exit;
   <div class="grain_background__overlay"></div>
 </div>
 
+<img src="<?php echo get_template_directory_uri() . "/images/wave.svg" ?>" class="groove-bg-wave">
+
 <div class="site container bg-white" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->

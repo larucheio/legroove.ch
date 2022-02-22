@@ -15523,6 +15523,11 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   border-color: var(--bs-secondary) !important;
 }
 
+@media (min-width: 1200px) {
+  .display-1 {
+    font-size: 14rem;
+  }
+}
 .groove-font-family-headings {
   font-family: "Bayon", "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -15537,6 +15542,12 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   -webkit-text-fill-color: transparent;
 }
 
+.groove-bg-wave {
+  position: absolute;
+  top: 30vh;
+  z-index: -1;
+}
+
 #social__instagram,
 #social__facebook {
   height: 40px;
@@ -15545,12 +15556,6 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
 #social__instagram path,
 #social__facebook path {
   fill: var(--bs-primary);
-}
-
-@media (min-width: 1200px) {
-  .display-1 {
-    font-size: 14rem;
-  }
 }
 
 /*# sourceMappingURL=theme.css.map */

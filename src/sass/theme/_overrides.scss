@@ -4,3 +4,9 @@
 .border-secondary {
     border-color: var(--bs-secondary) !important;
 }
+
+@media (min-width: 1200px) {
+  .display-1 {
+    font-size: 14rem;
+  }
+}

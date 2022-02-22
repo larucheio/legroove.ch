@@ -11,3 +11,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.groove-bg-wave {
+  position: absolute;
+  top: 30vh;
+  z-index: -1;
+}
