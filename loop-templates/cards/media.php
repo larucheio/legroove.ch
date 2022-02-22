@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
     <?php endif; ?>
 
     <div class="card-body">
-        <h2 class="h3 <?php if (!has_excerpt()) { echo 'mb-0'; } ?>"><?php the_title(); ?></h2>
+        <h2 class="h3 <?php if (!has_excerpt()) { echo 'mb-0'; } ?>"><?php normalize_headers(the_title()); ?></h2>
 
         <?php echo substr(get_the_excerpt(), 0, 100); ?>
     </div>

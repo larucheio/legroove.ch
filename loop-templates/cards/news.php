@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
     <?php endif; ?>
 
     <div class="card-body text-white">
-        <h2 class="h3"><?php the_title(); ?></h2>
+        <h2 class="h3"><?php normalize_headers(the_title()); ?></h2>
 
         <?php if (!has_post_thumbnail()): ?>
         <p>

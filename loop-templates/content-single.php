@@ -31,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="row">
 		<div class="col-lg-4 offset-lg-1">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<?php normalize_headers(the_title( '<h1 class="entry-title">', '</h1>' )); ?>
 		</div>
 		<div class="col-lg-6">
 			<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
