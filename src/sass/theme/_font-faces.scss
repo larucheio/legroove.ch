@@ -1,21 +1,21 @@
 @font-face {
  font-family: "Bayon";
- src: url("/fonts/Bayon/Bayon-Regular.ttf") format("ttf");
+ src: url("../fonts/Bayon/Bayon-Regular.ttf") format("truetype");
 }
 
 @font-face {
  font-family: "Roboto";
- src: url("/fonts/Roboto/Roboto-Regular.ttf") format("ttf");
+ src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
 }
 
 @font-face {
  font-family: "Roboto";
- src: url("/fonts/Roboto/Roboto-Italic.ttf") format("ttf");
+ src: url("../fonts/Roboto/Roboto-Italic.ttf") format("truetype");
  font-style: italic;
 }
 
 @font-face {
  font-family: "Roboto";
- src: url("/fonts/Roboto/Roboto-Bold.ttf") format("ttf");
+ src: url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
  font-weight: bold;
 }
