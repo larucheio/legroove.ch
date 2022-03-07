@@ -13,7 +13,7 @@ $url = get_the_post_thumbnail_url( $post->ID, 'large' );
 <div class="groove-card groove-card--agenda" style="background-image: url(<?php echo $url; ?>);">
     <div class="card-img-overlay d-flex justify-content-end flex-column pb-2">
         <h2 class="h3 d-inline-block">
-            <span class="groove-card--agenda__date"><?php echo tribe_get_start_date(null, null, 'd M') ?></span>
+            <span class="groove-card--agenda__date"><?php echo normalize_headers(tribe_get_start_date(null, null, 'd M')); ?></span>
             <?php normalize_headers(the_title()); ?>
         </h2>
 
