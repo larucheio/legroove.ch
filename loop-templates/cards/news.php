@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div class="groove-card h-100 border-none groove-bg-gradient">
+<div class="groove-card border-0 groove-bg-gradient">
     <?php if (has_post_thumbnail()): ?>
         <div class="m-3">
             <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
