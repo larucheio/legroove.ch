@@ -31,10 +31,35 @@
   @extend .card;
 
   aspect-ratio: 1 / 1;
+
+  .groove-card {
+    h2 {
+      line-height: 0.9;
+    }
+  }
 }
 
-.groove-card {
-  h2 {
-    line-height: 0.9;
-  }
+.groove-card--agenda {
+  @extend .bg-dark;
+  @extend .text-white;
+  @extend .border-0;
+
+  background-size: cover;
+
+  filter: grayscale(100%);
+  transition: 0.3s ease-in-out all;
+}
+
+.groove-card--agenda:hover {
+  filter: grayscale(0);
+}
+
+.groove-card--agenda__date {
+  @extend .h1;
+
+  line-height: 0.8;
+  margin-bottom: -0.1rem;
+
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
 }

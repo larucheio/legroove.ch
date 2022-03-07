@@ -96,7 +96,7 @@ hr:not([size]) {
   height: 1px;
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, .groove-card--agenda__date {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-family: "Bayon", "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -104,11 +104,11 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   line-height: 1.2;
 }
 
-h1, .h1 {
+h1, .h1, .groove-card--agenda__date {
   font-size: calc(1.375rem + 1.5vw);
 }
 @media (min-width: 1200px) {
-  h1, .h1 {
+  h1, .h1, .groove-card--agenda__date {
     font-size: 2.5rem;
   }
 }
@@ -7478,7 +7478,7 @@ textarea.form-control-lg {
   border: 1px solid #dee2e6 !important;
 }
 
-.border-0 {
+.border-0, .groove-card--agenda {
   border: 0 !important;
 }
 
@@ -8388,7 +8388,7 @@ textarea.form-control-lg {
   color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-white {
+.text-white, .groove-card--agenda {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
 }
@@ -8469,7 +8469,7 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-dark {
+.bg-dark, .groove-card--agenda {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
 }
@@ -12039,7 +12039,7 @@ a.skip-link {
   color: #fff;
 }
 
-.navbar h1, .navbar .h1 {
+.navbar h1, .navbar .h1, .navbar .groove-card--agenda__date {
   font-weight: 400;
 }
 
@@ -15554,9 +15554,26 @@ body {
 .groove-card {
   aspect-ratio: 1/1;
 }
-
-.groove-card h2, .groove-card .h2 {
+.groove-card .groove-card h2, .groove-card .groove-card .h2 {
   line-height: 0.9;
+}
+
+.groove-card--agenda {
+  background-size: cover;
+  filter: grayscale(100%);
+  transition: 0.3s ease-in-out all;
+}
+
+.groove-card--agenda:hover {
+  filter: grayscale(0);
+}
+
+.groove-card--agenda__date {
+  line-height: 0.8;
+  margin-bottom: -0.1rem;
+  -ms-writing-mode: tb-rl;
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
 }
 
 #social__instagram,
