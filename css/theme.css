@@ -15484,7 +15484,6 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   font-weight: bold;
 }
 .grain_background {
-  filter: contrast(150%) brightness(100%);
   background: linear-gradient(180deg, rgba(var(--bs-primary-rgb), 0.8), rgba(var(--bs-secondary-rgb), 0.8)), url("../images/cosmetics/noise.svg");
 }
 
@@ -15528,7 +15527,7 @@ body {
 }
 
 .groove-bg-wave {
-  position: absolute;
+  position: fixed;
   top: 30vh;
   z-index: -1;
 }
