@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 <div class="wrapper mt-5" id="wrapper-footer">
 	<div class="container text-primary groove-font-family-headings">
-		<div class="row">
+		<div class="row g-3">
 			<div class="col-md-2">
 				<a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url">
 					<?php echo file_get_contents(get_template_directory_uri() . "/images/legroove-logo.svg"); ?>
@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 			<div class="col-md-3">
 				<h3 class="mb-0">Contact</h3>
-				<p class="groove-font-family-headings">
+				<p>
 					9 rue des Gazometres,
 					<br>
 					1205 Geneve
@@ -39,9 +39,6 @@ defined( 'ABSPATH' ) || exit;
 					<a href="mailto:prog@legroove.ch" class="text-primary text-decoration-none">prog@legroove.ch</a>
 				</p>
 			</div>
-			<div class="col-md-3 offset-md-1">
-				<h3 class="mb-0">Partenaires</h3>
-			</div>
 		</div>
 
 		<div class="mt-5 text-primary text-center">
@@ -54,6 +51,49 @@ defined( 'ABSPATH' ) || exit;
 			<a href="https://www.facebook.com/legroovegva" class="ms-3 text-decoration-none">
 				<?php echo file_get_contents(get_template_directory_uri() . "/images/social/facebook.svg"); ?>
 			</a>
+		</div>
+
+		<div class="mt-5 groove-font-family-headings">
+			<div class="row g-3">
+				<div class="col-lg-3">
+					<h3 class="mb-0">Partenaires</h3>
+					<p>
+						Collectif Nocturne
+						<br>
+						Corner 25
+					</p>
+				</div>
+				<div class="col-lg-2">
+					<h3 class="mb-0">Media</h3>
+					<p>Daily Rock</p>
+				</div>
+				<div class="col-lg-2">
+					<h3 class="mb-0">Media heberges</h3>
+					<p>
+						Epic magazine
+						<br>
+						Kalvin Station
+					</p>
+				</div>
+				<div class="col-lg-2">
+					<h3 class="mb-0">Institutionnel</h3>
+					<p>
+						La ville de Genève
+					</p>
+				</div>
+				<div class="col-lg-3">
+					<h3 class="mb-0">Financier</h3>
+					<p>
+						Fondation Aletheia
+						<br>
+						Fplce (Fondation pour la promotion de lieux pour la culture émergente)
+						<br>
+						Loterie Romande
+						<br>
+						Ernst Göhner Stiftung
+					</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div><!-- wrapper end -->
