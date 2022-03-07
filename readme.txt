@@ -52,5 +52,8 @@ This theme bundles the following third-party resources:
 
 == Groove ==
 
+* Carousel
+Images en noir & blanc
+
 * Call to action (boutons/liens)
 Ajouter la classe `groove_cta` afin d'obtenir la bonne couleur, police et bords arrondis
