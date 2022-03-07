@@ -15496,6 +15496,10 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   fill: var(--bs-primary);
 }
 
+body {
+  min-height: 100vh;
+}
+
 .border-primary {
   border-color: var(--bs-primary) !important;
 }
