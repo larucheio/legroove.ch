@@ -41,7 +41,7 @@ $the_query = new WP_Query( array(
 
 			<main class="site-main mt-5" id="main">
 
-				<div class="row row-cols-1 row-cols-md-3 g-4">
+				<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 					<?php
 					if ( $the_query->have_posts() ) {
 						// Start the Loop.

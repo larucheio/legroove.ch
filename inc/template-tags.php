@@ -165,7 +165,7 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 
 		echo '<h1 class="mt-5 text-secondary">Prochainement au Groove</h1>';
 		?>
-		<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 			 <?php
 			 // Start the loop.
 			 foreach ( $featured_posts as $post ) {
