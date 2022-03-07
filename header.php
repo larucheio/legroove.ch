@@ -35,10 +35,10 @@ defined( 'ABSPATH' ) || exit;
 
 <img src="<?php echo get_template_directory_uri() . "/images/wave.svg" ?>" class="groove-bg-wave">
 
-<div class="site container bg-white" id="page">
+<div class="site container bg-white <?php if (is_home()) { echo 'p-0'; } ?>" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<header id="wrapper-navbar">
+	<header id="wrapper-navbar" class="<?php if (is_home()) { echo 'container'; } ?>">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 

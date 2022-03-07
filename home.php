@@ -29,15 +29,15 @@ $the_query = new WP_Query( array(
 ));
 ?>
 
-<div class="wrapper" id="index-wrapper">
+<div class="wrapper pt-0" id="index-wrapper">
+
+    <?php
+        echo do_shortcode('[smartslider3 slider="1"]');
+    ?>
 
 	<div class="container" id="content" tabindex="-1">
 
 		<div class="row">
-
-			<?php
-				echo do_shortcode('[smartslider3 slider="1"]');
-			?>
 
 			<main class="site-main mt-5" id="main">
 
