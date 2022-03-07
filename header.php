@@ -30,14 +30,8 @@ defined( 'ABSPATH' ) || exit;
 	</style>
 </head>
 
-<body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
+<body class="grain_background" <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
-
-<!-- Elements for noisy gradient background -->
-<div class="grain_background">
-  <div class="grain_background__noise"></div>
-  <div class="grain_background__overlay"></div>
-</div>
 
 <img src="<?php echo get_template_directory_uri() . "/images/wave.svg" ?>" class="groove-bg-wave">
 
