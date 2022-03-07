@@ -49,3 +49,8 @@ This theme bundles the following third-party resources:
 * Font Awesome: https://fontawesome.com/v4.7/license/ (Font: SIL OFL 1.1, (S)CSS: MIT)
 * Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (MIT)
 * WP Bootstrap Navwalker by Edward McIntyre & William Patton: https://github.com/wp-bootstrap/wp-bootstrap-navwalker (GNU GPLv3)
+
+== Groove ==
+
+* Call to action (boutons/liens)
+Ajouter la classe `groove_cta` afin d'obtenir la bonne couleur, police et bords arrondis

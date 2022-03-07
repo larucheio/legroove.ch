@@ -2789,7 +2789,7 @@ textarea.form-control-lg {
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
 }
-.btn-check[disabled] + .btn, .wpcf7 .btn-check[disabled] + input[type=submit], .btn-check:disabled + .btn, .wpcf7 .btn-check:disabled + input[type=submit] {
+.btn-check[disabled] + .btn, .btn-check[disabled] + .groove_cta, .wpcf7 .btn-check[disabled] + input[type=submit], .btn-check:disabled + .btn, .btn-check:disabled + .groove_cta, .wpcf7 .btn-check:disabled + input[type=submit] {
   pointer-events: none;
   filter: none;
   opacity: 0.65;
@@ -3175,11 +3175,11 @@ textarea.form-control-lg {
 .input-group > .form-select:focus {
   z-index: 3;
 }
-.input-group .btn, .input-group .wpcf7 input[type=submit], .wpcf7 .input-group input[type=submit] {
+.input-group .btn, .input-group .groove_cta, .input-group .wpcf7 input[type=submit], .wpcf7 .input-group input[type=submit] {
   position: relative;
   z-index: 2;
 }
-.input-group .btn:focus, .input-group .wpcf7 input[type=submit]:focus, .wpcf7 .input-group input[type=submit]:focus {
+.input-group .btn:focus, .input-group .groove_cta:focus, .input-group .wpcf7 input[type=submit]:focus, .wpcf7 .input-group input[type=submit]:focus {
   z-index: 3;
 }
 
@@ -3218,7 +3218,8 @@ textarea.form-control-lg {
 .widget_archive .input-group-lg > select,
 .input-group-lg > .form-select,
 .input-group-lg > .input-group-text,
-.input-group-lg > .btn {
+.input-group-lg > .btn,
+.input-group-lg > .groove_cta {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
 }
@@ -3244,7 +3245,8 @@ textarea.form-control-lg {
 .widget_archive .input-group-sm > select,
 .input-group-sm > .form-select,
 .input-group-sm > .input-group-text,
-.input-group-sm > .btn {
+.input-group-sm > .btn,
+.input-group-sm > .groove_cta {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
 }
@@ -3944,7 +3946,7 @@ textarea.form-control-lg {
   z-index: 3;
 }
 
-.btn, .wpcf7 input[type=submit] {
+.btn, .groove_cta, .wpcf7 input[type=submit] {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
@@ -3965,47 +3967,47 @@ textarea.form-control-lg {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, .wpcf7 input[type=submit] {
+  .btn, .groove_cta, .wpcf7 input[type=submit] {
     transition: none;
   }
 }
-.btn:hover, .wpcf7 input[type=submit]:hover {
+.btn:hover, .groove_cta:hover, .wpcf7 input[type=submit]:hover {
   color: #212529;
 }
-.btn-check:focus + .btn, .wpcf7 .btn-check:focus + input[type=submit], .btn:focus, .wpcf7 input[type=submit]:focus {
+.btn-check:focus + .btn, .btn-check:focus + .groove_cta, .wpcf7 .btn-check:focus + input[type=submit], .btn:focus, .groove_cta:focus, .wpcf7 input[type=submit]:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
-.btn:disabled, .wpcf7 input[type=submit]:disabled, .btn.disabled, .wpcf7 input.disabled[type=submit], fieldset:disabled .btn, fieldset:disabled .wpcf7 input[type=submit], .wpcf7 fieldset:disabled input[type=submit] {
+.btn:disabled, .groove_cta:disabled, .wpcf7 input[type=submit]:disabled, .btn.disabled, .disabled.groove_cta, .wpcf7 input.disabled[type=submit], fieldset:disabled .btn, fieldset:disabled .groove_cta, fieldset:disabled .wpcf7 input[type=submit], .wpcf7 fieldset:disabled input[type=submit] {
   pointer-events: none;
   opacity: 0.65;
 }
 
-.btn-primary {
+.btn-primary, .groove_cta {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
 }
-.btn-primary:hover {
+.btn-primary:hover, .groove_cta:hover {
   color: #fff;
   background-color: #0b5ed7;
   border-color: #0a58ca;
 }
-.btn-check:focus + .btn-primary, .btn-primary:focus {
+.btn-check:focus + .btn-primary, .btn-check:focus + .groove_cta, .btn-primary:focus, .groove_cta:focus {
   color: #fff;
   background-color: #0b5ed7;
   border-color: #0a58ca;
   box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
 }
-.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+.btn-check:checked + .btn-primary, .btn-check:checked + .groove_cta, .btn-check:active + .btn-primary, .btn-check:active + .groove_cta, .btn-primary:active, .groove_cta:active, .btn-primary.active, .active.groove_cta, .show > .btn-primary.dropdown-toggle, .show > .dropdown-toggle.groove_cta {
   color: #fff;
   background-color: #0a58ca;
   border-color: #0a53be;
 }
-.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+.btn-check:checked + .btn-primary:focus, .btn-check:checked + .groove_cta:focus, .btn-check:active + .btn-primary:focus, .btn-check:active + .groove_cta:focus, .btn-primary:active:focus, .groove_cta:active:focus, .btn-primary.active:focus, .active.groove_cta:focus, .show > .btn-primary.dropdown-toggle:focus, .show > .dropdown-toggle.groove_cta:focus {
   box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
 }
-.btn-primary:disabled, .btn-primary.disabled {
+.btn-primary:disabled, .groove_cta:disabled, .btn-primary.disabled, .disabled.groove_cta {
   color: #fff;
   background-color: #0d6efd;
   border-color: #0d6efd;
@@ -4433,13 +4435,13 @@ textarea.form-control-lg {
   color: #6c757d;
 }
 
-.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit] {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .groove_cta, .wpcf7 .btn-group-lg > input[type=submit] {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0;
 }
 
-.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit] {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .groove_cta, .wpcf7 .btn-group-sm > input[type=submit] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0;
@@ -4793,34 +4795,46 @@ textarea.form-control-lg {
   display: inline-flex;
   vertical-align: middle;
 }
-.btn-group > .btn, .wpcf7 .btn-group > input[type=submit],
+.btn-group > .btn, .btn-group > .groove_cta, .wpcf7 .btn-group > input[type=submit],
 .btn-group-vertical > .btn,
+.btn-group-vertical > .groove_cta,
 .wpcf7 .btn-group-vertical > input[type=submit] {
   position: relative;
   flex: 1 1 auto;
 }
-.btn-group > .btn-check:checked + .btn, .wpcf7 .btn-group > .btn-check:checked + input[type=submit],
+.btn-group > .btn-check:checked + .btn, .btn-group > .btn-check:checked + .groove_cta, .wpcf7 .btn-group > .btn-check:checked + input[type=submit],
 .btn-group > .btn-check:focus + .btn,
+.btn-group > .btn-check:focus + .groove_cta,
 .wpcf7 .btn-group > .btn-check:focus + input[type=submit],
 .btn-group > .btn:hover,
+.btn-group > .groove_cta:hover,
 .wpcf7 .btn-group > input[type=submit]:hover,
 .btn-group > .btn:focus,
+.btn-group > .groove_cta:focus,
 .wpcf7 .btn-group > input[type=submit]:focus,
 .btn-group > .btn:active,
+.btn-group > .groove_cta:active,
 .wpcf7 .btn-group > input[type=submit]:active,
 .btn-group > .btn.active,
+.btn-group > .active.groove_cta,
 .wpcf7 .btn-group > input.active[type=submit],
 .btn-group-vertical > .btn-check:checked + .btn,
+.btn-group-vertical > .btn-check:checked + .groove_cta,
 .wpcf7 .btn-group-vertical > .btn-check:checked + input[type=submit],
 .btn-group-vertical > .btn-check:focus + .btn,
+.btn-group-vertical > .btn-check:focus + .groove_cta,
 .wpcf7 .btn-group-vertical > .btn-check:focus + input[type=submit],
 .btn-group-vertical > .btn:hover,
+.btn-group-vertical > .groove_cta:hover,
 .wpcf7 .btn-group-vertical > input[type=submit]:hover,
 .btn-group-vertical > .btn:focus,
+.btn-group-vertical > .groove_cta:focus,
 .wpcf7 .btn-group-vertical > input[type=submit]:focus,
 .btn-group-vertical > .btn:active,
+.btn-group-vertical > .groove_cta:active,
 .wpcf7 .btn-group-vertical > input[type=submit]:active,
 .btn-group-vertical > .btn.active,
+.btn-group-vertical > .active.groove_cta,
 .wpcf7 .btn-group-vertical > input.active[type=submit] {
   z-index: 1;
 }
@@ -4834,7 +4848,7 @@ textarea.form-control-lg {
   width: auto;
 }
 
-.btn-group > .btn:not(:first-child), .wpcf7 .btn-group > input[type=submit]:not(:first-child),
+.btn-group > .btn:not(:first-child), .btn-group > .groove_cta:not(:first-child), .wpcf7 .btn-group > input[type=submit]:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
@@ -4849,12 +4863,12 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .groove_cta + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .groove_cta + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -4864,11 +4878,11 @@ textarea.form-control-lg {
   align-items: flex-start;
   justify-content: center;
 }
-.btn-group-vertical > .btn, .wpcf7 .btn-group-vertical > input[type=submit],
+.btn-group-vertical > .btn, .btn-group-vertical > .groove_cta, .wpcf7 .btn-group-vertical > input[type=submit],
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
-.btn-group-vertical > .btn:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .groove_cta:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
@@ -5729,7 +5743,7 @@ textarea.form-control-lg {
   display: none;
 }
 
-.btn .badge, .wpcf7 input[type=submit] .badge {
+.btn .badge, .groove_cta .badge, .wpcf7 input[type=submit] .badge {
   position: relative;
   top: -1px;
 }
@@ -6985,7 +6999,7 @@ textarea.form-control-lg {
   background-color: currentColor;
   opacity: 0.5;
 }
-.placeholder.btn::before, .wpcf7 input.placeholder[type=submit]::before {
+.placeholder.btn::before, .placeholder.groove_cta::before, .wpcf7 input.placeholder[type=submit]::before {
   display: inline-block;
   content: "";
 }
@@ -7499,7 +7513,7 @@ textarea.form-control-lg {
   border-left: 0 !important;
 }
 
-.border-primary {
+.border-primary, .groove_cta {
   border-color: #0d6efd !important;
 }
 
@@ -8419,7 +8433,7 @@ textarea.form-control-lg {
   --bs-text-opacity: 1;
 }
 
-.bg-primary {
+.bg-primary, .groove_cta {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
@@ -8555,7 +8569,7 @@ textarea.form-control-lg {
   border-radius: 50% !important;
 }
 
-.rounded-pill {
+.rounded-pill, .groove_cta {
   border-radius: 50rem !important;
 }
 
@@ -15499,7 +15513,7 @@ body {
   min-height: 100vh;
 }
 
-.border-primary {
+.border-primary, .groove_cta {
   border-color: var(--bs-primary) !important;
 }
 
@@ -15530,6 +15544,10 @@ body {
   position: fixed;
   top: 30vh;
   z-index: -1;
+}
+
+.groove_cta {
+  font-family: "Bayon", "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 #social__instagram,

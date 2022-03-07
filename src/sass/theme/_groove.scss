@@ -17,3 +17,12 @@
   top: 30vh;
   z-index: -1;
 }
+
+.groove_cta {
+  font-family: $headings-font-family;
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .bg-primary;
+  @extend .border-primary;
+  @extend .rounded-pill;
+}
