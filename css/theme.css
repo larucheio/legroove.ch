@@ -5456,7 +5456,7 @@ textarea.form-control-lg {
   color: #fff;
 }
 
-.card {
+.card, .groove-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -5466,22 +5466,23 @@ textarea.form-control-lg {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
-.card > hr {
+.card > hr, .groove-card > hr {
   margin-right: 0;
   margin-left: 0;
 }
-.card > .list-group {
+.card > .list-group, .groove-card > .list-group {
   border-top: inherit;
   border-bottom: inherit;
 }
-.card > .list-group:first-child {
+.card > .list-group:first-child, .groove-card > .list-group:first-child {
   border-top-width: 0;
 }
-.card > .list-group:last-child {
+.card > .list-group:last-child, .groove-card > .list-group:last-child {
   border-bottom-width: 0;
 }
-.card > .card-header + .list-group,
-.card > .list-group + .card-footer {
+.card > .card-header + .list-group, .groove-card > .card-header + .list-group,
+.card > .list-group + .card-footer,
+.groove-card > .list-group + .card-footer {
   border-top: 0;
 }
 
@@ -5545,7 +5546,7 @@ textarea.form-control-lg {
   width: 100%;
 }
 
-.card-group > .card {
+.card-group > .card, .card-group > .groove-card {
   margin-bottom: 0.75rem;
 }
 @media (min-width: 576px) {
@@ -5553,11 +5554,11 @@ textarea.form-control-lg {
     display: flex;
     flex-flow: row wrap;
   }
-  .card-group > .card {
+  .card-group > .card, .card-group > .groove-card {
     flex: 1 0 0%;
     margin-bottom: 0;
   }
-  .card-group > .card + .card {
+  .card-group > .card + .card, .card-group > .groove-card + .card, .card-group > .card + .groove-card, .card-group > .groove-card + .groove-card {
     margin-left: 0;
     border-left: 0;
   }
@@ -15548,6 +15549,14 @@ body {
 
 .groove_cta {
   font-family: "Bayon", "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.groove-card {
+  aspect-ratio: 1/1;
+}
+
+.groove-card h2, .groove-card .h2 {
+  line-height: 0.9;
 }
 
 #social__instagram,

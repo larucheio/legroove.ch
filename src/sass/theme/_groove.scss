@@ -26,3 +26,15 @@
   @extend .border-primary;
   @extend .rounded-pill;
 }
+
+.groove-card {
+  @extend .card;
+
+  aspect-ratio: 1 / 1;
+}
+
+.groove-card {
+  h2 {
+    line-height: 0.9;
+  }
+}
