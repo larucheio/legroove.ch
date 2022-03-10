@@ -12,10 +12,12 @@ $url = get_the_post_thumbnail_url( $post->ID, 'large' );
 
 <div class="groove-card groove-card--agenda" style="background-image: url(<?php echo $url; ?>);">
     <div class="card-img-overlay d-flex justify-content-end flex-column pb-2">
-        <h2 class="h3 d-inline-block">
+        <div class="d-flex align-items-end">
             <span class="groove-card--agenda__date"><?php echo normalize_headers(tribe_get_start_date(null, null, 'd M')); ?></span>
-            <?php normalize_headers(the_title()); ?>
-        </h2>
+            <h2 class="h3 groove-card--agenda__title">
+                <?php normalize_headers(the_title()); ?>
+            </h2>
+        </div>
 
         <div class="d-flex justify-content-between">
             <span class="small"><?php echo tribe_get_start_date(null, null, 'd.m.Y') ?> · AGENDA</span>

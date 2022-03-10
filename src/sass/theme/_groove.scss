@@ -61,11 +61,17 @@
   filter: grayscale(0);
 }
 
+.groove-card--agenda__title {
+  line-height: 0.8;
+  margin-bottom: 0;
+  margin-left: .5rem;
+}
+
 .groove-card--agenda__date {
   @extend .h1;
 
   line-height: 0.8;
-  margin-bottom: -0.1rem;
+  margin-bottom: 0;
 
   writing-mode: tb-rl;
   transform: rotate(-180deg);

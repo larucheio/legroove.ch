@@ -15575,9 +15575,15 @@ body {
   filter: grayscale(0);
 }
 
+.groove-card--agenda__title {
+  line-height: 0.8;
+  margin-bottom: 0;
+  margin-left: 0.5rem;
+}
+
 .groove-card--agenda__date {
   line-height: 0.8;
-  margin-bottom: -0.1rem;
+  margin-bottom: 0;
   -ms-writing-mode: tb-rl;
   writing-mode: tb-rl;
   transform: rotate(-180deg);
