@@ -15560,6 +15560,7 @@ body {
 
 .groove-card {
   aspect-ratio: 1/1;
+  overflow: hidden;
 }
 .groove-card .groove-card h2, .groove-card .groove-card .h2 {
   line-height: 0.9;

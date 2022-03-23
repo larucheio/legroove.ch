@@ -38,6 +38,7 @@
   @extend .card;
 
   aspect-ratio: 1 / 1;
+  overflow: hidden;
 
   .groove-card {
     h2 {
