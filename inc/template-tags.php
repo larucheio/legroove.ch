@@ -163,18 +163,20 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 			'start_date'     => 'now',
 		] );
 
-		echo '<h1 class="mt-5 text-secondary">Prochainement au Groove</h1>';
-		?>
-		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+		if ($featured_posts) {
+			echo '<h1 class="mt-5 text-secondary">Prochainement au Groove</h1>';
+			?>
+			<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+				 <?php
+				 // Start the loop.
+				 foreach ( $featured_posts as $post ) {
+					 setup_postdata( $post );
+					 get_template_part( 'loop-templates/content', 'home' );
+				 }
+				 ?>
+			 </div>
 			 <?php
-			 // Start the loop.
-			 foreach ( $featured_posts as $post ) {
-				 setup_postdata( $post );
-				 get_template_part( 'loop-templates/content', 'home' );
-			 }
-			 ?>
-		 </div>
-		 <?php
+		}
 		wp_reset_postdata();
 	}
 }
