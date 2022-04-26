@@ -3,6 +3,34 @@
   width: 75px;
 
   path {
+    transition: $transition;
     fill: var(--bs-primary);
+  }
+}
+
+#logosvg:hover,
+#logosvg:active,
+#logosvg:focus {
+  path {
+    fill: var(--bs-secondary);
+  }
+}
+
+#navbarNavDropdown {
+  #social__instagram,
+  #social__facebook {
+    height: 25px;
+    width: 25px;
+  }
+
+  #social__instagram:hover,
+  #social__instagram:active,
+  #social__instagram:focus,
+  #social__facebook:hover,
+  #social__facebook:active,
+  #social__facebook:focus {
+    path {
+      fill: var(--bs-secondary);
+    }
   }
 }

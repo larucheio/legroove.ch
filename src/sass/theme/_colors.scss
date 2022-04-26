@@ -1,3 +1,5 @@
+$body-color: var(--bs-body-color);
+
 @each $name, $color in $colors {
 
 	.has-#{$name}-color,

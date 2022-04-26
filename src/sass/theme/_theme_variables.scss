@@ -5,3 +5,5 @@ $headings-font-family: 'Bayon', $font-family-sans-serif;
 
 $nav-link-color: var(--bs-primary) !important;
 $nav-link-hover-color: var(--bs-secondary) !important;
+
+$transition: fill .15s ease-in-out, color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;

@@ -1,0 +1,35 @@
+#wrapper-footer {
+  #logosvg,
+  #social__instagram,
+  #social__facebook {
+    path {
+      transition: $transition;
+      fill: $body-color;
+    }
+  }
+
+  #logosvg:hover,
+  #logosvg:active,
+  #logosvg:focus,
+  #social__instagram:hover,
+  #social__instagram:active,
+  #social__instagram:focus,
+  #social__facebook:hover,
+  #social__facebook:active,
+  #social__facebook:focus {
+    path {
+      fill: var(--bs-primary);
+    }
+  }
+
+  a {
+    transition: $transition;
+    color: $body-color;
+  }
+
+  a:hover,
+  a:active,
+  a:focus {
+    color: var(--bs-primary);
+  }
+}

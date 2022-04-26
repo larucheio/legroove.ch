@@ -151,12 +151,6 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 	 * Display navigation to next/previous post when applicable.
 	 */
 	function understrap_post_nav() {
-		$category_id = get_the_category(get_the_ID())[0]->cat_ID;
-
-		if (!$category_id) {
-			return;
-		}
-
 		global $post;
 		$featured_posts = tribe_get_events( [
 			'posts_per_page' => 4,

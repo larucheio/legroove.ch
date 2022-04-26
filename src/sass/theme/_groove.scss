@@ -40,10 +40,8 @@
   aspect-ratio: 1 / 1;
   overflow: hidden;
 
-  .groove-card {
-    h2 {
-      line-height: 0.9;
-    }
+  h2 {
+    line-height: 0.9;
   }
 }
 
@@ -53,13 +51,27 @@
   @extend .border-0;
 
   background-size: cover;
+  filter: grayscale(1);
 
-  filter: grayscale(100%);
-  transition: 0.3s ease-in-out all;
+  &::before {
+    z-index: -1;
+    content: '';
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    backdrop-filter: grayscale(1);
+    background: linear-gradient(to bottom, rgba(var(--bs-primary-rgb), 0.75), rgba(var(--bs-secondary-rgb), 0.75));
+  }
 }
 
 .groove-card--agenda:hover {
   filter: grayscale(0);
+
+  &::before {
+    display: block;
+  }
 }
 
 .groove-card--agenda__title {
@@ -76,4 +88,40 @@
 
   writing-mode: tb-rl;
   transform: rotate(-180deg);
+}
+
+.groove-card--media {
+  .groove-card--media__image {
+    filter: grayscale(1);
+  }
+}
+
+.groove-card--news {
+  .groove-card--news__image {
+    filter: grayscale(1);
+  }
+}
+
+.groove-card--news:hover {
+  .groove-card--news__image {
+    opacity: 0.25;
+  }
+}
+
+.groove-event-practical-informations {
+  @extend .mt-5;
+
+  color: var(--bs-secondary);
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.groove-event-practical-informations__separator {
+  @extend .display-2;
+  @extend .fw-bold;
+
+  margin-bottom: 0;
+  line-height: 0.25;
 }

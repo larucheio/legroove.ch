@@ -38,21 +38,35 @@ defined( 'ABSPATH' ) || exit;
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
-		<!-- The WordPress Menu goes here -->
-		<?php
-		wp_nav_menu(
-			array(
-				'theme_location'  => 'primary',
-				'container_class' => 'collapse navbar-collapse',
-				'container_id'    => 'navbarNavDropdown',
-				'menu_class'      => 'navbar-nav ms-auto text-uppercase h4',
-				'fallback_cb'     => '',
-				'menu_id'         => 'main-menu',
-				'depth'           => 2,
-				'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-			)
-		);
-		?>
+		<div id="navbarNavDropdown" class="collapse navbar-collapse">
+			<!-- The WordPress Menu goes here -->
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location'  => 'primary',
+					'container' => false,
+					'menu_class'      => 'navbar-nav ms-auto text-uppercase h4',
+					'fallback_cb'     => '',
+					'menu_id'         => 'main-menu',
+					'depth'           => 2,
+					'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+				)
+			);
+			?>
+
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="https://www.instagram.com/legroove_gva/" class="nav-link">
+						<?php echo file_get_contents(get_template_directory_uri() . "/images/social/instagram-header.svg"); ?>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="https://www.facebook.com/legroovegva" class="nav-link">
+						<?php echo file_get_contents(get_template_directory_uri() . "/images/social/facebook-header.svg"); ?>
+					</a>
+				</li>
+			</ul>
+		</div>
 
 	</div><!-- .container(-fluid) -->
 

@@ -1,0 +1,18 @@
+:root {
+  --tec-color-accent-primary: var(--bs-primary);
+}
+
+.tribe-events-schedule {
+  display: none;
+}
+
+.tribe-block__event-website a {
+  font-family: $headings-font-family;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50rem;
+}
+
+.tribe-block__event-website a:hover {
+  background-color: var(--bs-secondary);
+}

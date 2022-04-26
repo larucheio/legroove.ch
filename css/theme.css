@@ -498,13 +498,13 @@ progress {
   }
 }
 
-.display-2 {
+.display-2, .groove-event-practical-informations__separator {
   font-size: calc(1.575rem + 3.9vw);
   font-weight: 300;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
-  .display-2 {
+  .display-2, .groove-event-practical-informations__separator {
     font-size: 4.5rem;
   }
 }
@@ -7948,7 +7948,7 @@ textarea.form-control-lg {
   margin-top: 1.5rem !important;
 }
 
-.mt-5 {
+.mt-5, .groove-event-practical-informations {
   margin-top: 3rem !important;
 }
 
@@ -8268,7 +8268,7 @@ textarea.form-control-lg {
   font-weight: 400 !important;
 }
 
-.fw-bold {
+.fw-bold, .groove-event-practical-informations__separator {
   font-weight: 700 !important;
 }
 
@@ -15507,7 +15507,55 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   width: 75px;
 }
 #logosvg path {
+  transition: fill 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   fill: var(--bs-primary);
+}
+
+#logosvg:hover path,
+#logosvg:active path,
+#logosvg:focus path {
+  fill: var(--bs-secondary);
+}
+
+#navbarNavDropdown #social__instagram,
+#navbarNavDropdown #social__facebook {
+  height: 25px;
+  width: 25px;
+}
+#navbarNavDropdown #social__instagram:hover path,
+#navbarNavDropdown #social__instagram:active path,
+#navbarNavDropdown #social__instagram:focus path,
+#navbarNavDropdown #social__facebook:hover path,
+#navbarNavDropdown #social__facebook:active path,
+#navbarNavDropdown #social__facebook:focus path {
+  fill: var(--bs-secondary);
+}
+
+#wrapper-footer #logosvg path,
+#wrapper-footer #social__instagram path,
+#wrapper-footer #social__facebook path {
+  transition: fill 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  fill: var(--bs-body-color);
+}
+#wrapper-footer #logosvg:hover path,
+#wrapper-footer #logosvg:active path,
+#wrapper-footer #logosvg:focus path,
+#wrapper-footer #social__instagram:hover path,
+#wrapper-footer #social__instagram:active path,
+#wrapper-footer #social__instagram:focus path,
+#wrapper-footer #social__facebook:hover path,
+#wrapper-footer #social__facebook:active path,
+#wrapper-footer #social__facebook:focus path {
+  fill: var(--bs-primary);
+}
+#wrapper-footer a {
+  transition: fill 0.15s ease-in-out, color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  color: var(--bs-body-color);
+}
+#wrapper-footer a:hover,
+#wrapper-footer a:active,
+#wrapper-footer a:focus {
+  color: var(--bs-primary);
 }
 
 body {
@@ -15562,18 +15610,32 @@ body {
   aspect-ratio: 1/1;
   overflow: hidden;
 }
-.groove-card .groove-card h2, .groove-card .groove-card .h2 {
+.groove-card h2, .groove-card .h2 {
   line-height: 0.9;
 }
 
 .groove-card--agenda {
   background-size: cover;
-  filter: grayscale(100%);
-  transition: 0.3s ease-in-out all;
+  filter: grayscale(1);
+}
+.groove-card--agenda::before {
+  z-index: -1;
+  content: "";
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  -webkit-backdrop-filter: grayscale(1);
+  backdrop-filter: grayscale(1);
+  background: linear-gradient(to bottom, rgba(var(--bs-primary-rgb), 0.75), rgba(var(--bs-secondary-rgb), 0.75));
 }
 
 .groove-card--agenda:hover {
   filter: grayscale(0);
+}
+.groove-card--agenda:hover::before {
+  display: block;
 }
 
 .groove-card--agenda__title {
@@ -15590,6 +15652,30 @@ body {
   transform: rotate(-180deg);
 }
 
+.groove-card--media .groove-card--media__image {
+  filter: grayscale(1);
+}
+
+.groove-card--news .groove-card--news__image {
+  filter: grayscale(1);
+}
+
+.groove-card--news:hover .groove-card--news__image {
+  opacity: 0.25;
+}
+
+.groove-event-practical-informations {
+  color: var(--bs-secondary);
+}
+.groove-event-practical-informations h2, .groove-event-practical-informations .h2 {
+  margin-bottom: 0;
+}
+
+.groove-event-practical-informations__separator {
+  margin-bottom: 0;
+  line-height: 0.25;
+}
+
 #social__instagram,
 #social__facebook {
   height: 40px;
@@ -15598,6 +15684,38 @@ body {
 #social__instagram path,
 #social__facebook path {
   fill: var(--bs-primary);
+}
+
+.n2-ss-button-container a {
+  padding: 0.5rem 1rem !important;
+  font-size: 1rem !important;
+  background-color: var(--bs-primary) !important;
+  font-family: "Bayon", "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  border-radius: 50rem !important;
+}
+
+.n2-ss-button-container:hover a {
+  color: white !important;
+  background-color: var(--bs-secondary) !important;
+}
+
+:root {
+  --tec-color-accent-primary: var(--bs-primary);
+}
+
+.tribe-events-schedule {
+  display: none;
+}
+
+.tribe-block__event-website a {
+  font-family: "Bayon", "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50rem;
+}
+
+.tribe-block__event-website a:hover {
+  background-color: var(--bs-secondary);
 }
 
 /*# sourceMappingURL=theme.css.map */

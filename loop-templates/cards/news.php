@@ -9,9 +9,9 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<div class="groove-card border-0 groove-bg-gradient">
+<div class="groove-card groove-card--news border-0 groove-bg-gradient">
     <?php if (has_post_thumbnail()): ?>
-        <div class="m-3" style="background: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>'); height: 50%; background-size: cover; background-position: center;"></div>
+        <div class="groove-card--news__image m-3" style="background: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) ); ?>'); height: 50%; background-size: cover; background-position: center;"></div>
     <?php endif; ?>
 
     <div class="card-body text-white">

@@ -1,0 +1,15 @@
+.n2-ss-button-container {
+  a {
+    padding: 0.5rem 1rem !important;
+    font-size: 1rem !important;
+    background-color: var(--bs-primary) !important;
+    font-family: $headings-font-family !important;
+    border-radius: 50rem !important;
+  }
+}
+.n2-ss-button-container:hover {
+  a {
+    color: white !important;
+    background-color: var(--bs-secondary) !important;
+  }
+}
