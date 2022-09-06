@@ -153,7 +153,7 @@ if ( ! function_exists( 'understrap_post_nav' ) ) {
 	function understrap_post_nav() {
 		global $post;
 		$posts = tribe_get_events( [
-			'posts_per_page' => 4,
+			'posts_per_page' => 3,
 			'ends_after'     => 'now',
 		] );
 
