@@ -19,7 +19,7 @@
 <div class="row">
 	<div class="col-12 col-lg-6 offset-lg-6">
 		<div class="text-secondary text-uppercase">
-			<?php echo tribe_get_start_date(null, false, 'd M y'); ?>
+			<?php echo tribe_get_start_date(null, false, 'l d F y'); ?>
 		</div>
 		<?php $this->template( 'single-event/title' ); ?>
 	</div>
