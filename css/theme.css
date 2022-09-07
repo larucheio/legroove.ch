@@ -8479,7 +8479,7 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
 }
 
-.bg-white {
+.bg-white, .footer__sponsors {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
 }
@@ -15556,6 +15556,40 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
 #wrapper-footer a:active,
 #wrapper-footer a:focus {
   color: var(--bs-primary);
+}
+
+.footer__sponsors ul {
+  margin-bottom: 0;
+  list-style-type: none;
+  text-align: center !important;
+  padding: 20px 0;
+}
+.footer__sponsors ul li {
+  display: inline;
+  text-align: center;
+}
+.footer__sponsors img {
+  height: 25px;
+  margin: 10px 20px;
+}
+
+.partenaires {
+  margin-bottom: 0;
+  list-style-type: none;
+  text-align: center !important;
+  padding: 20px 0;
+}
+.partenaires a {
+  transition: 0.2s ease-in-out;
+}
+.partenaires a:hover {
+  opacity: 0.5;
+  background-blend-mode: multiply;
+  transition: 0.2s;
+}
+.partenaires img {
+  width: 80px;
+  margin: 0 20px;
 }
 
 body {
