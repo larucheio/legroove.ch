@@ -46,7 +46,7 @@ if ($category) {
 }
 
 $start = date('Y-m-01', strtotime($selected_date_value));
-$end = date('Y-m-t', strtotime($selected_date_value));
+$end = date('Y-m-01', strtotime('+ 1 month', strtotime($selected_date_value)));
 $groove_events = tribe_get_events([
 	'start_date' => $start,
 	'end_date' => $end,
