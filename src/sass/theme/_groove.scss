@@ -40,14 +40,6 @@
   aspect-ratio: 1 / 1;
   overflow: hidden;
 
-  // fallback
-  @supports not (aspect-ratio: auto) {
-    padding-top: 100%;
-    height: 0;
-    position: relative;
-    overflow: hidden;
-  }
-
   h2 {
     line-height: 0.9;
   }
@@ -60,6 +52,14 @@
 
   background-size: cover;
   filter: grayscale(1);
+
+  // fallback
+  @supports not (aspect-ratio: auto) {
+    padding-top: 100%;
+    height: 0;
+    position: relative;
+    overflow: hidden;
+  }
 
   &::before {
     z-index: -1;
@@ -101,12 +101,22 @@
 .groove-card--media {
   .groove-card--media__image {
     filter: grayscale(1);
+
+    // fallback
+    @supports not (aspect-ratio: auto) {
+      height: 150px !important;
+    }
   }
 }
 
 .groove-card--news {
   .groove-card--news__image {
     filter: grayscale(1);
+
+    // fallback
+    @supports not (aspect-ratio: auto) {
+      height: 150px !important;
+    }
   }
 }
 
