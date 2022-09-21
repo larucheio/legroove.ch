@@ -57,7 +57,7 @@ $the_query = new WP_Query( array(
 					<h2 class="display-2">
 						<span class="groove-text-gradient">Appel a benevoles!!!</span>
 					</h2>
-					<a href="/contact" class="groove_cta btn-lg">Contactez-nous</a>
+					<a href="mailto:bar@legroove.ch" class="groove_cta btn-lg">Contactez-nous</a>
 				</section>
 
 			</main><!-- #main -->
