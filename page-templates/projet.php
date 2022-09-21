@@ -46,15 +46,16 @@ get_header();
 		display: none !important;
 	}
 
-	/* .cls-1 {
-		stroke: yellow !important;
-		fill: yellow !important;
-	} */
-
 	.site.container {
-		background-image: url('<?php echo get_template_directory_uri() . "/images/wave-projet.svg" ?>');
-		background-repeat: no-repeat;
-		background-position: center;
+		background-image: none;
+	}
+
+	@media (min-width: 992px) {
+		.site.container {
+			background-image: url('<?php echo get_template_directory_uri() . "/images/wave-projet.svg" ?>');
+			background-repeat: no-repeat;
+			background-position: center;
+		}
 	}
 </style>
 
