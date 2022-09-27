@@ -25,7 +25,7 @@ $the_query = new WP_Query( array(
       'post_type' => array('tribe_events', 'post'),
 	  'post__in' => $sticky,
 	  'orderby' => 'date',
-	  'order' => 'DESC',
+	  'order' => 'ASC',
 ));
 ?>
 
