@@ -24,7 +24,8 @@ $sticky = array_merge($sticky, $events);
 $the_query = new WP_Query( array(
       'post_type' => array('tribe_events', 'post'),
 	  'post__in' => $sticky,
-	  'orderby' => 'date',
+	  'orderby' => 'meta_value',
+      'meta_key' => '_EventStartDate',
 	  'order' => 'ASC',
 ));
 ?>
