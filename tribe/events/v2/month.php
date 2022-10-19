@@ -54,8 +54,8 @@ $groove_events = tribe_get_events([
 ]);
 
 $years = [];
-for ($i = intval(date('Y')); $i >= 2021; $i--) {
-	array_push($years, $i);
+for ($i = intval(date('Y')); $i >= 2020; $i--) {
+	array_push($years, $i + 1);
 }
 
 $categories = get_terms(
