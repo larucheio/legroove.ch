@@ -28,9 +28,6 @@ if ( empty( $disable_event_search ) ) {
 
 $default_date        = date('Y-m');
 $selected_date_value = $this->get( [ 'bar', 'date' ] );
-if (!$selected_date_value) {
-	$selected_date_value = $default_date;
-}
 
 $tax_query = null;
 $path = array_filter(explode('/', parse_url( $_SERVER[ 'REQUEST_URI' ], PHP_URL_PATH )));
@@ -45,13 +42,21 @@ if ($category) {
 	);
 }
 
-$start = date('Y-m-01', strtotime($selected_date_value));
-$end = date('Y-m-01', strtotime('+ 1 month', strtotime($selected_date_value)));
-$groove_events = tribe_get_events([
-	'start_date' => $start,
-	'end_date' => $end,
-	'tax_query'=> $tax_query,
-]);
+if ($selected_date_value) {
+	$start = date('Y-m-01', strtotime($selected_date_value));
+	$end = date('Y-m-01', strtotime('+ 1 month', strtotime($selected_date_value)));
+	$groove_events = tribe_get_events([
+		'start_date' => $start,
+		'end_date' => $end,
+		'tax_query'=> $tax_query,
+	]);
+} else {
+	$start = date('Y-m-01', strtotime($default_date));
+	$groove_events = tribe_get_events([
+		'start_date' => $start,
+		'tax_query'=> $tax_query,
+	]);
+}
 
 $years = [];
 for ($i = intval(date('Y')); $i >= 2020; $i--) {
