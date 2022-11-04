@@ -51,7 +51,7 @@ if ($selected_date_value) {
 		'tax_query'=> $tax_query,
 	]);
 } else {
-	$start = date('Y-m-01', strtotime($default_date));
+	$start = date('Y-m-d');
 	$groove_events = tribe_get_events([
 		'start_date' => $start,
 		'tax_query'=> $tax_query,
