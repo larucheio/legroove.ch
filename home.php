@@ -18,7 +18,7 @@ get_header();
 
 /* Get all sticky posts */
 $sticky = get_option( 'sticky_posts' );
-$events = array_column(tribe_get_events(['featured' => true]), 'ID');
+$events = array_column(tribe_get_events(['start_date' => 'now', 'post_per_page' => 3]), 'ID');
 $sticky = array_merge($sticky, $events);
 
 $the_query = new WP_Query( array(
