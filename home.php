@@ -25,8 +25,9 @@ $the_query = new WP_Query( array(
       'post_type' => array('tribe_events', 'post'),
 	  'post__in' => $sticky,
 	  'orderby' => 'meta_value',
-      'meta_key' => '_EventStartDate',
+          'meta_key' => '_EventStartDate',
 	  'order' => 'ASC',
+	  'posts_per_page' => '3',
 ));
 ?>
 
