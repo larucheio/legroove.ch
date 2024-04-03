@@ -89,6 +89,11 @@ defined( 'ABSPATH' ) || exit;
 		<li>
 			<img src="<?php echo get_template_directory_uri() . "/images/sponsors/loterie-romande.png"; ?>" alt="Loterie Romande">
 		</li>
+		<li>
+			<a href="https://wecandanceit.ch/" target="_blank">
+				<img src="<?php echo get_template_directory_uri() . "/images/sponsors/we-can-dance-it.png"; ?>" alt="we Can Dance It">
+			</a>
+		</li>
 	</ul>
 </div>
 
